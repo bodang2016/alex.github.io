@@ -13,10 +13,10 @@
 <meta property="og:site_name" content="Hotel Yamato">
 <meta property="og:description" content="图的存储方式首先来看一个例子：  要实现图的遍历，需要先将图存储到一个数据结构中，最常用的存储方法是使用一个二维数组e来存储（邻接矩阵存储法），如下：  二维数组中第i行第j列表示的就是顶点i到顶点j是否有边，  ∞表示没有边 1表示有边 0表示自己到自己  无向图的邻接矩阵是对称的，实现的时候可以考虑压缩 遍历基本算法深度优先（DFS）从1号顶点出发开始遍历这个图，采用深度优先可以得到下图的遍历">
 <meta property="og:image" content="http://yamatotech.top/images/graphsearch-170817/example.PNG">
-<meta property="og:image" content="http://bodang2016.github.io/2017/08/16/GraphSearchLJ/images/graphsearch-170817/storage.PNG">
-<meta property="og:image" content="http://bodang2016.github.io/2017/08/16/GraphSearchLJ/images/graphsearch-170817/depthfirstexp.PNG">
-<meta property="og:image" content="http://bodang2016.github.io/2017/08/16/GraphSearchLJ/images/graphsearch-170817/breadthfirstexp.PNG">
-<meta property="og:updated_time" content="2017-08-16T17:23:43.460Z">
+<meta property="og:image" content="http://yamatotech.top/images/graphsearch-170817/storage.PNG">
+<meta property="og:image" content="http://yamatotech.top/images/graphsearch-170817/depthfirstexp.PNG">
+<meta property="og:image" content="http://yamatotech.top/images/graphsearch-170817/breadthfirstexp.PNG">
+<meta property="og:updated_time" content="2017-08-16T17:28:16.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图的遍历方法学习笔记">
 <meta name="twitter:description" content="图的存储方式首先来看一个例子：  要实现图的遍历，需要先将图存储到一个数据结构中，最常用的存储方法是使用一个二维数组e来存储（邻接矩阵存储法），如下：  二维数组中第i行第j列表示的就是顶点i到顶点j是否有边，  ∞表示没有边 1表示有边 0表示自己到自己  无向图的邻接矩阵是对称的，实现的时候可以考虑压缩 遍历基本算法深度优先（DFS）从1号顶点出发开始遍历这个图，采用深度优先可以得到下图的遍历">
@@ -237,7 +237,7 @@
             <h2 id="图的存储方式"><a href="#图的存储方式" class="headerlink" title="图的存储方式"></a>图的存储方式</h2><p>首先来看一个例子：</p>
 <p><img src="http://yamatotech.top/images/graphsearch-170817/example.PNG" alt="Example"></p>
 <p>要实现图的遍历，需要先将图存储到一个数据结构中，最常用的存储方法是使用一个二维数组e来存储（邻接矩阵存储法），如下：</p>
-<p><img src="images/graphsearch-170817/storage.PNG" alt="Storage"></p>
+<p><img src="http://yamatotech.top/images/graphsearch-170817/storage.PNG" alt="Storage"></p>
 <p>二维数组中第i行第j列表示的就是顶点i到顶点j是否有边，</p>
 <ul>
 <li>∞表示没有边</li>
@@ -246,7 +246,7 @@
 </ul>
 <p><em>无向图的邻接矩阵是对称的，实现的时候可以考虑压缩</em></p>
 <h2 id="遍历基本算法"><a href="#遍历基本算法" class="headerlink" title="遍历基本算法"></a>遍历基本算法</h2><h3 id="深度优先（DFS）"><a href="#深度优先（DFS）" class="headerlink" title="深度优先（DFS）"></a>深度优先（DFS）</h3><p>从1号顶点出发开始遍历这个图，采用深度优先可以得到下图的遍历结果</p>
-<p><img src="images/graphsearch-170817/depthfirstexp.PNG" alt="DepthFirst"></p>
+<p><img src="http://yamatotech.top/images/graphsearch-170817/depthfirstexp.PNG" alt="DepthFirst"></p>
 <p>每个顶点上方的数字代表这个顶点在第几步被访问，由于我不喜欢书上那种概念的描述方法，这里放一个我在别处看到的思想概括：</p>
 <blockquote>
 <p><strong>深度优先遍历的主要思想：</strong></p>
@@ -262,7 +262,7 @@
 <li><strong>递归返回段</strong>：返回上一级顶点</li>
 </ul>
 <h3 id="广度优先（BFS）"><a href="#广度优先（BFS）" class="headerlink" title="广度优先（BFS）"></a>广度优先（BFS）</h3><p>同样的我们还看刚才的例子，从1号顶点出发，采用广优先可以得到下图的遍历结果</p>
-<p><img src="images/graphsearch-170817/breadthfirstexp.PNG" alt="DepthFirst"></p>
+<p><img src="http://yamatotech.top/images/graphsearch-170817/breadthfirstexp.PNG" alt="BreadthFirst"></p>
 <blockquote>
 <p><strong>广度优先的主要思想：</strong></p>
 <p>首先以一个未被访问过的顶点作为起始顶点，访问所有与其相邻的顶点，然后对每一个相邻的顶点，再访问它们相邻的并且未被访问过的顶点，直到所有顶点都被访问过，遍历结束。</p>
